@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<link href="~/Content/Home.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+
+<body id="HomePage">
+    <br />
+    <div class="jumbotron">
+        <h1 style="font:bold 70px Times New Roman;">CSharp Master</h1>
+        <p style="font: 25px Courier New">
+            Test your C# algorithm skills!
+            <br />
+            Try solve our problems or 
+        just compile your own code !
+        
+        </p>
+    </div>
+
+
+   
+        <div class="col-md-4 blockbutton">
+            <a href="/Home/Compiler" style="color:inherit;">
+                <label class="labelnavigate">COMPILER</label>
+            </a>
+        </div>
+
+        <div class="col-md-4 blockbutton">
+            <a href="/Warmup" style="color:inherit;">
+                <label class="labelnavigate">WARMUP</label>
+            </a>
+        </div>
+
+            <div class="col-md-4 blockbutton">
+                <a href="/Warmup" style="color:inherit;">
+                    <label class="labelnavigate">EXERCISES</label>
+                </a>
+           </div>
+
+    <script>
+
+        $(".blockbutton").hover(function () {
+
+            $(this).css("background-color", "rgba(0,0,0,0.9)");
+            $(this).css("font", "bold 44px arial");
+
+
+        }, function () {
+            $(this).css("background-color", "rgba(0,0,0,0.6)");
+            $(this).css("font", "bold 40px arial");
+
+            });
+
+    </script>
+
+
+
+</body>
+

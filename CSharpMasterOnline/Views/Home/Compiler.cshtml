@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Compiler";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<link href="~/Content/CodeArea.css" rel="stylesheet" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<body id="HomePage">
+
+    <br />
+  
+
+    
+        <div class="col-md-12">
+            
+           
+                <textarea  spellcheck="false" placeholder="TYPE YOUR CODE HERE" type="text" id="codearea" cols="100"  rows="24"></textarea>
+           
+
+                @*FOR LOADING EFFECT
+                   <i id="loading" class="fa fa-spinner fa-spin"></i>*@
+            <br />
+                <button id="submit" class="btn btn-success btn-lg" style="width:300px;"><i id="loading"   ></i> COMPILE</button>
+                <label id="status" ></label>
+
+            <div class="well"  style="height:auto; width:auto;" id="resultdiv">
+                
+                <samp  id="output">
+               
+                </samp>
+
+            </div>
+
+
+
+
+        </div>
+    
+
+</body>
+
+<script src="~/Scripts/CodeArea.js"></script>

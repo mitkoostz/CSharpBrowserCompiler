@@ -1,0 +1,5 @@
+﻿.navbar {
+    border-radius: 14px;
+    background-image: url(/Resources/navbar.jpg);
+    font: bold 18px Courier New;
+}
