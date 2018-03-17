@@ -3,3 +3,8 @@
     background-image: url(/Resources/navbar.jpg);
     font: bold 18px Courier New;
 }
+
+.dropdown-menu {
+    background-image: url(/Resources/navbar.jpg);
+}
+

@@ -4,3 +4,25 @@
     height: 100%;
     overflow: hidden;
 }
+
+.jumbotron {
+    color:white;
+    background-color: rgb(0,0,0);
+    opacity: 0.5;
+    text-align:center;
+}
+
+.tittle{
+    font:bold 30px arial;
+}
+
+.problemdiv {
+    text-align: center;
+    background-color: rgb(0,0,0);
+    opacity: 0.6;
+}
+
+.problemname {
+    color:white;
+    font: 30px Courier New;
+}

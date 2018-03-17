@@ -88,3 +88,7 @@ D:\My Pojects C#\CSharpMaster\CSharpMasterOnline\obj\Debug\CSharpMasterOnline.cs
 D:\My Pojects C#\CSharpMaster\CSharpMasterOnline\obj\Debug\CSharpMasterOnline.dll
 D:\My Pojects C#\CSharpMaster\CSharpMasterOnline\obj\Debug\CSharpMasterOnline.pdb
 D:\My Pojects C#\CSharpMaster\CSharpMasterOnline\obj\Debug\CSharpMasterOnline.csprojResolveAssemblyReference.cache
+D:\My Pojects C#\CSharpMaster\CSharpMasterOnline\bin\EntityFramework.dll
+D:\My Pojects C#\CSharpMaster\CSharpMasterOnline\bin\EntityFramework.SqlServer.dll
+D:\My Pojects C#\CSharpMaster\CSharpMasterOnline\bin\EntityFramework.xml
+D:\My Pojects C#\CSharpMaster\CSharpMasterOnline\bin\EntityFramework.SqlServer.xml

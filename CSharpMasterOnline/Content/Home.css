@@ -2,7 +2,7 @@
     background: url(/Resources/warmup.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .jumbotron {

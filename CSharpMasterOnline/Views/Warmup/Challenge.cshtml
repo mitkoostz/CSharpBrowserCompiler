@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Challenge";
+}
+@model CSharpMasterOnline.Models.ChallengeTransport
+<link href="~/Content/ChallengeView.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<body id="body">
+
+       
+    <h1 id="tittle">@Model.Name</h1>
+
+    <label hidden id="challengeId">@Model.Id</label>
+
+    <div id="Condition">
+
+        @Html.Raw(@Model.Condition.Replace("\n", "<br />"))
+
+    </div>
+
+    <br />
+
+   
+    <label style="color:white; opacity:0.7;">Sample <b>Input</b></label>
+    <div class="well" style="opacity:0.5;width:30%;">
+        <samp>@Html.Raw(Model.SampleInput)</samp>
+    </div>
+
+
+    <label style="color:white; opacity:0.7;">Sample <b>Output</b></label>
+    <div class="well" style="opacity:0.5;width:30%;">
+        <samp>@Html.Raw(Model.SampleOutput)</samp>
+    </div>
+
+    <br />
+    <br />
+   
+    <div class="progress" style="visibility:hidden;">
+        <div class="progress-bar progress-bar-striped" style="width:0%;"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5">
+        <textarea spellcheck="false" placeholder="TYPE YOUR CODE HERE" type="text" id="codearea" cols="100" rows="24">
+     
+@Html.Raw(Model.InitialCode.Trim())
+      </textarea>
+
+       </div>
+        <div class="col-md-7" style="text-align:center;">
+            <span  id="glyph" style="font-size:100px;"></span>
+            <br />
+           <h1 id="result" style="font:bold 40px verdana;"></h1>
+        </div>
+
+    </div>
+
+
+
+   <br />
+   <br />
+
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-success" id="submit" type="button" style="width:100%; height:40px;border-radius:20px;font:bold 20px arial;">SUBMIT SOLUTION</button>
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
+    </div>
+       
+
+
+
+</body>
+
+<script src="~/Scripts/ChallengeCodeSubmit.js"></script>

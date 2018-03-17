@@ -46,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -144,18 +150,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WarmupController.cs" />
+    <Compile Include="DB\DataContext.cs" />
+    <Compile Include="DB\Tables\Challenge.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChallengeTransport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransferHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CodeArea.css" />
+    <Content Include="Content\ChallengeIndex.css" />
     <Content Include="Content\Home.css" />
     <Content Include="Content\WarmupIndex.css" />
-    <Content Include="Content\ExerciseView.css" />
+    <Content Include="Content\ChallengeView.css" />
     <Content Include="Content\mdb.min.css" />
     <Content Include="Content\navbar.css" />
     <Content Include="CSharpCodeProvider\code.txt" />
@@ -169,6 +180,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\ChallengeCodeSubmit.js" />
     <Content Include="Scripts\CodeArea.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -194,12 +206,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Compiler.cshtml" />
     <Content Include="Views\Warmup\Index.cshtml" />
-    <Content Include="Views\Warmup\Exercise.cshtml" />
+    <Content Include="Views\Warmup\Challenge.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Challenges.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Challenges\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
@@ -233,7 +246,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49437</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49437/</IISUrl>
+          <IISUrl>http://localhost:7314/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

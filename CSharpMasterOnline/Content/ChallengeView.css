@@ -1,0 +1,36 @@
+﻿#body {
+    background: url(/Resources/warmup.jpg) no-repeat;
+    background-size: cover;
+   
+}
+
+#tittle {
+    opacity: 0.8;
+    color: white;
+    text-align: center;
+    font: bold 40px Carrier New;
+}
+
+#Condition {
+    background-color: rgb(0,0,0);
+    opacity: 0.6;
+    color: white;
+    font: 18px verdana;
+}
+
+#codearea {
+    border-radius: 20px;
+    text-align: left;
+    max-width: 100%;
+    resize: none;
+    color: white;
+    background-color: rgba(30,30,30,1);
+}
+#codearea:focus {
+    outline:none;
+}
+
+.btn:focus {
+    outline: none;
+}
+

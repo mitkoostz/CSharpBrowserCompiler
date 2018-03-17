@@ -9,6 +9,10 @@ using System.Web.Mvc;
 using System.Web.Services;
 using System.IO;
 using System.Reflection;
+using System.Data.Entity;
+using CSharpMasterOnline.DB;
+using CSharpMasterOnline.DB.Tables;
+using System.Data.Entity.Validation;
 
 namespace CSharpMasterOnline.Controllers
 {
@@ -16,7 +20,6 @@ namespace CSharpMasterOnline.Controllers
     {
         public ActionResult Index()
         {
-   
             return View();
         }
 
@@ -25,6 +28,13 @@ namespace CSharpMasterOnline.Controllers
 
             return View();
         }
+
+        public ActionResult Challenges()
+        {
+            return View();
+        }
+
+
 
         [WebMethod]
         public JsonResult Compile(string code)
@@ -83,6 +93,9 @@ namespace CSharpMasterOnline.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
 
         }
+
+
+
 
     }
 }

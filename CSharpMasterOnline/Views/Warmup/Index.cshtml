@@ -2,11 +2,48 @@
 @{
     ViewBag.Title = "Warmup";
 }
+@model ICollection<CSharpMasterOnline.DB.Tables.Challenge>
+
 <link href="~/Content/WarmupIndex.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
 
 <body id="body">
+    <br />
+    <div class="jumbotron">
+        <h1 class="tittle">Warmup</h1>
+    </div>
 
-    <h1 style="position:absolute; left:45%; color:white; font:bold 50px arial; "></h1>
+   
+        @foreach (var challenge in Model)
+        {
+            <div class="col-md-5 odd problemdiv">
 
+                <a href="/Warmup/@challenge.Name.Replace(" ", "-")/@challenge.Id" style="color:inherit;text-decoration:none">
+
+                    <span style="left:89%;top:10%; position:absolute;" class="label label-success">@challenge.Difficulty</span>
+                    <h1 class="problemname">@challenge.Name</h1>
+                </a>
+            </div>
+
+
+        }
+  
+
+
+        <script>
+
+            $(".problemdiv").hover(function () {
+
+                $(this).css("opacity", "0.8");
+                $(this).children(".problemname").css("font", "bold 30px Courier New");
+
+
+            }, function () {
+                $(this).css("opacity", "0.6");
+                $(".problemname").css("font", "30px Courier New");
+
+            });
+
+        </script>
 
 </body>

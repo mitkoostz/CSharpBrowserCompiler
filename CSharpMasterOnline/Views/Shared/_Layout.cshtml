@@ -23,9 +23,21 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Warmup", "Index", "Warmup")</li>
-                    <li>@Html.ActionLink("Exercises", "Index", "Home")</li>
                     <li>@Html.ActionLink("Compiler", "Compiler", "Home")</li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown" style="display:inline-block;">  
+                                           
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Challenges<span class="caret"></span>
+                        </a>
+                       
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" style="color:white;font:24px Carrier New; opacity:0.6;"  href="/Warmup">Warmup</a></li>
+                            <li><a class="dropdown-item" style="color:white;font:24px Carrier New; opacity:0.6;"  href="#">Algorithms</a></li>
+                            <li><a class="dropdown-item" style="color:white;font:24px Carrier New; opacity:0.6;"  href="#">Others</a></li>
+                        </ul>
+                    </li>        
 
                 </ul>
             </div>

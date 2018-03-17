@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Challenges";
+}
+
+<link href="~/Content/ChallengeIndex.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<body id="body">
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 id="tittle">Challenges</h1>
+        </div>
+    </div>
+
+    <a href="/Warmup" style="color:inherit;">
+
+        <div class="row blockbutton">
+            <label class="labelnavigate">WARMUP</label>
+        </div>
+    </a>
+    <br />
+
+    <a href="/Home/Challenges" style="color:inherit;">
+        <div class="row blockbutton">
+            <label class="labelnavigate">ALGORITHMS</label>
+        </div>
+    </a>
+    <br />
+
+    <a href="/Warmup" style="color:inherit;">
+
+        <div class="row blockbutton">
+            <label class="labelnavigate">OTHERS</label>
+        </div>
+    </a>
+    <br />
+
+    <script>
+
+        $(".blockbutton").hover(function () {
+
+            $(this).css("background-color", "rgba(0,0,0,0.9)");
+            $(this).css("font", "34px verdana");
+
+
+        }, function () {
+            $(this).css("background-color", "rgba(0,0,0,0.6)");
+            $(this).css("font", "32px verdana");
+
+            });
+
+    </script>
+
+
+</body>
